@@ -1,6 +1,6 @@
 # Raghav Sejpal
 
-CS (AI & ML) · VIT Vellore
+CSE (AI & ML) · VIT Vellore
 Chairperson, IEEE Computer Society Chapter
 
 build things that leave impact
