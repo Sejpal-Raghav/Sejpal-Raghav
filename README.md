@@ -3,7 +3,12 @@
 CS (AI & ML) · VIT Vellore
 Chairperson, IEEE Computer Society Chapter
 
-I build things that answer questions existing tools couldn't.
+build things that leave impact
+
+
+---
+
+[Resume](https://drive.google.com/file/d/1WqCuKjGZyL_ktYiZ6uuPn6NnC5kVMxCs/view) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/raghav-sejpal/) &nbsp;·&nbsp; sejpalraghav05@gmail.com
 
 ---
 
@@ -42,7 +47,7 @@ Output is stored in JSONB for schema-flexible retrieval, and users can export th
 
 `Next.js 16` `Google Gemini` `Neon (PostgreSQL)` `Tailwind CSS` `Framer Motion` `Vercel` `html2pdf`
 
-[GitHub](#) &nbsp;·&nbsp; [Live](#)
+[GitHub](https://github.com/Sejpal-Raghav/AI-startup-validator) &nbsp;·&nbsp; [Live](https://ai-startup-validator-ten.vercel.app/)
 
 </details>
 
@@ -61,7 +66,7 @@ The model outputs a confidence score across all 3 classes with an explainability
 
 `Python` `RoBERTa-base` `T5` `FastAPI` `Uvicorn` `scikit-learn` `NumPy` `Pandas`
 
-[GitHub](#)
+[GitHub](https://github.com/Sejpal-Raghav/textorigin)
 
 </details>
 
@@ -80,7 +85,7 @@ Every input receives a 0-100 trust score bucketed into 3 tiers, with configurabl
 
 `.NET 8` `C#` `JSON` `CSV Parsing` `Statistical Analysis`
 
-[GitHub](#)
+[GitHub](https://github.com/Sejpal-Raghav/Input-Integrity-Firewall)
 
 </details>
 
@@ -99,7 +104,7 @@ IEEE paper currently under review.
 
 `Python` `XGBoost` `Random Forest` `scikit-learn` `Statistical Analysis` `NumPy`
 
-[GitHub](#)
+[GitHub](https://github.com/Sejpal-Raghav/Cryptography-ML)
 
 </details>
 
@@ -116,7 +121,7 @@ Supports zero-shot, role-prompted, chain-of-thought, and few-shot templates. Sco
 
 `Python` `Sentence Transformers` `all-MiniLM-L6-v2` `Streamlit` `Hugging Face Spaces`
 
-[GitHub](#) &nbsp;·&nbsp; [Live](#)
+[GitHub](https://github.com/Sejpal-Raghav/LLMINSIGHT) &nbsp;·&nbsp;
 
 </details>
 
@@ -174,6 +179,3 @@ Targeting EMNLP 2026 / ACL Findings. Sits at the intersection of RL, NLP, and ag
 
 Machine Learning · Machine Vision · Reinforcement Learning · Operating Systems · Computer Networks · DSA · Design & Analysis of Algorithms
 
----
-
-[Resume](https://drive.google.com/file/d/1WqCuKjGZyL_ktYiZ6uuPn6NnC5kVMxCs/view) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/raghav-sejpal/) &nbsp;·&nbsp; sejpalraghav05@gmail.com
