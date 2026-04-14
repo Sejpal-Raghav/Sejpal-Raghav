@@ -1,9 +1,20 @@
 # Raghav Sejpal
 
-CS (AI & ML) · VIT Vellore · CGPA 8.53
+CS (AI & ML) · VIT Vellore
 Chairperson, IEEE Computer Society Chapter
 
 I build things that answer questions existing tools couldn't.
+
+---
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/Sejpal-Raghav/Sejpal-Raghav/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/Sejpal-Raghav/Sejpal-Raghav/output/github-contribution-grid-snake.svg" />
+  <img alt="github contribution grid snake animation"
+    src="https://raw.githubusercontent.com/Sejpal-Raghav/Sejpal-Raghav/output/github-contribution-grid-snake.svg" />
+</picture>
 
 ---
 
@@ -14,75 +25,98 @@ Built 17+ REST APIs (Next.js + NeonDB), cut response time 30%, server load 40%.
 
 ---
 
-## Projects
+## Recent Projects
 
 <details>
-<summary><strong>ValidateAI</strong> — AI Startup Idea Validator</summary>
+<summary><strong>ValidateAI</strong> — AI Startup Idea Validator &nbsp;|&nbsp; <code>Next.js</code> <code>Gemini</code> <code>PostgreSQL</code></summary>
 
 &nbsp;
 
-Full-stack platform generating structured validation reports across 7 dimensions.
-5-model Gemini fallback chain, prompt injection sanitization, JSONB storage.
+Most startup validators give you a vibe check. ValidateAI gives you a structured report.
 
-`Next.js 16` `Gemini` `PostgreSQL` `Tailwind` `Vercel`
+Built a full-stack platform that takes a startup idea and generates analysis across 7 dimensions: market sizing, competition landscape, monetization potential, risk factors, target audience, go-to-market, and overall viability. The whole thing runs on a 5-model Gemini fallback chain so users never hit a dead end even under high API demand.
 
-[GitHub](#) · [Live](#)
+Prompt design was the hard part. Vague inputs (like "I want to build an app") need to be caught before they produce hallucinated analysis, so I built vagueness detection with strict JSON enforcement before anything reaches the model. Rate limiting and prompt injection sanitization sit on top of that.
+
+Output is stored in JSONB for schema-flexible retrieval, and users can export their report as a PDF.
+
+`Next.js 16` `Google Gemini` `Neon (PostgreSQL)` `Tailwind CSS` `Framer Motion` `Vercel` `html2pdf`
+
+[GitHub](#) &nbsp;·&nbsp; [Live](#)
 
 </details>
 
+---
+
 <details>
-<summary><strong>TextOrigin</strong> — 3-Class Text Origin Classifier</summary>
+<summary><strong>TextOrigin</strong> — 3-Class Text Origin Classifier &nbsp;|&nbsp; <code>RoBERTa</code> <code>FastAPI</code> <code>T5</code></summary>
 
 &nbsp;
 
-Classifies text as human-written, AI-generated, or AI-paraphrased.
-Fine-tuned RoBERTa-base on 15k samples. 5k+ T5-synthesized paraphrases. FastAPI REST API + CLI.
+Binary AI detectors (human vs AI) are easy to fool with a paraphrase. TextOrigin targets that gap with a third class: AI-paraphrased.
 
-`Python` `RoBERTa` `T5` `FastAPI` `scikit-learn`
+Fine-tuned RoBERTa-base on 15,000 samples with fp16 precision. To avoid depending on hand-labelled paraphrased data, I synthesized 5,000+ samples using a T5 paraphrasing model. On top of the transformer, I engineered 6 statistical features — GPT-2 perplexity, burstiness, entropy, AI phrase ratio, and more — that distinguish how humans and LLMs write differently at a structural level.
+
+The model outputs a confidence score across all 3 classes with an explainability signal attached. Deployed as a FastAPI REST API and CLI supporting text, file, and JSON input modes with auto-generated Swagger docs.
+
+`Python` `RoBERTa-base` `T5` `FastAPI` `Uvicorn` `scikit-learn` `NumPy` `Pandas`
 
 [GitHub](#)
 
 </details>
 
+---
+
 <details>
-<summary><strong>Input Integrity Firewall</strong> — Offline Data Validation Engine</summary>
+<summary><strong>Input Integrity Firewall</strong> — Offline Data Validation Engine &nbsp;|&nbsp; <code>.NET 8</code> <code>C#</code></summary>
 
 &nbsp;
 
-Deterministic .NET 8 validation layer with zero external dependencies.
-0–100 trust scoring across 3 tiers, z-score outlier detection, drift flagging.
+Data pipelines fail silently. By the time bad data reaches a model or a database, the damage is already done. This project is a deterministic offline validation layer that catches problems before they get that far.
 
-`.NET 8` `C#` `Statistical Analysis`
+Built in .NET 8 with zero external dependencies. Runs 5 detection checks across a 7-component modular architecture: schema validation, statistical drift detection, outlier flagging (beyond 3.0 z-score), variance comparison against a baseline (flags anything exceeding 25%), and type integrity checks.
+
+Every input receives a 0-100 trust score bucketed into 3 tiers, with configurable penalty weights (20 per critical violation, 5 per warning). Output is a structured allow/block decision with a full audit trail.
+
+`.NET 8` `C#` `JSON` `CSV Parsing` `Statistical Analysis`
 
 [GitHub](#)
 
 </details>
 
+---
+
 <details>
-<summary><strong>Cryptography-ML</strong> — PRNG Classifier (IEEE paper in progress)</summary>
+<summary><strong>Cryptography-ML</strong> — PRNG Classifier &nbsp;|&nbsp; <code>XGBoost</code> <code>scikit-learn</code> · IEEE paper in progress</summary>
 
 &nbsp;
 
-XGBoost + Random Forest across 8 generators with 18 statistical features.
-Finding: NIST SP 800-22 tests fail at short sequence lengths. ML doesn't.
+The standard way to test if a number generator is truly random is NIST SP 800-22, a suite of 15 statistical tests. The problem: those tests require long sequences to work. At short sequence lengths, they become statistically inoperable and produce unreliable results.
 
-`Python` `XGBoost` `scikit-learn`
+I built a classifier using XGBoost and Random Forest trained on 18 statistical features extracted from outputs of 8 different PRNG algorithms. The finding: ML classifiers correctly distinguish generator types at sequence lengths where NIST fails entirely. This has real implications for cryptographic auditing and embedded systems where only short outputs are available.
+
+IEEE paper currently under review.
+
+`Python` `XGBoost` `Random Forest` `scikit-learn` `Statistical Analysis` `NumPy`
 
 [GitHub](#)
 
 </details>
 
+---
+
 <details>
-<summary><strong>LLMInsight</strong> — LLM Evaluation Framework</summary>
+<summary><strong>LLMInsight</strong> — LLM Evaluation Framework &nbsp;|&nbsp; <code>Sentence Transformers</code> <code>Streamlit</code></summary>
 
 &nbsp;
 
-Prompt engineering and evaluation across zero-shot, CoT, few-shot, role-prompted templates.
-Semantic similarity scoring via all-MiniLM-L6-v2. Live on Hugging Face Spaces.
+Prompt engineering without measurement is just guessing. LLMInsight is a framework for actually evaluating how different prompting strategies change model output quality.
 
-`Python` `Sentence Transformers` `Streamlit`
+Supports zero-shot, role-prompted, chain-of-thought, and few-shot templates. Scores outputs using semantic similarity via all-MiniLM-L6-v2 so you can compare across prompt styles quantitatively, not just by feel. Live on Hugging Face Spaces.
 
-[GitHub](#) · [Live](#)
+`Python` `Sentence Transformers` `all-MiniLM-L6-v2` `Streamlit` `Hugging Face Spaces`
+
+[GitHub](#) &nbsp;·&nbsp; [Live](#)
 
 </details>
 
@@ -95,8 +129,9 @@ Semantic similarity scoring via all-MiniLM-L6-v2. Live on Hugging Face Spaces.
 
 &nbsp;
 
-C++, Python, Java, JavaScript, TypeScript, C#, Bash
-Next.js, React, Node.js, FastAPI, .NET, Tailwind CSS
+`C++` `Python` `Java` `JavaScript` `TypeScript` `C#` `Bash`
+
+`Next.js` `React` `Node.js` `Express.js` `FastAPI` `.NET` `Tailwind CSS`
 
 </details>
 
@@ -105,7 +140,8 @@ Next.js, React, Node.js, FastAPI, .NET, Tailwind CSS
 
 &nbsp;
 
-RAG pipelines, LLM Evaluation, Prompt Engineering, Ollama, GenAI, PyTorch (basic)
+`RAG Pipelines` `LLM Evaluation` `Prompt Engineering` `Ollama` `GenAI` `PyTorch (basic)`
+`Token Usage Analysis` `Response Quality Assessment` `Semantic Similarity`
 
 </details>
 
@@ -114,7 +150,7 @@ RAG pipelines, LLM Evaluation, Prompt Engineering, Ollama, GenAI, PyTorch (basic
 
 &nbsp;
 
-PostgreSQL, MongoDB, Docker, Git, Linux, AWS fundamentals, CI/CD basics
+`PostgreSQL` `MySQL` `MongoDB` `Docker` `Git` `Linux` `AWS fundamentals` `CI/CD basics` `Postman`
 
 </details>
 
@@ -122,16 +158,22 @@ PostgreSQL, MongoDB, Docker, Git, Linux, AWS fundamentals, CI/CD basics
 
 ## Research
 
-Investigating whether RLVR-based reasoning fine-tuning degrades tool-grounding fidelity
-in LLM agents. Targeting EMNLP 2026 / ACL Findings.
+Investigating whether RLVR-based reasoning fine-tuning degrades tool-grounding fidelity in LLM agents.
+Targeting EMNLP 2026 / ACL Findings. Sits at the intersection of RL, NLP, and agent behavior.
 
 ---
 
 ## Leadership
 
-**Chairperson — IEEE Computer Society, VIT** *(Nov 2025 – Present)*
-250 members · 650+ hackathon participants · Rs. 95,000 in sponsorships across 1,400+ companies
+**Chairperson — IEEE Computer Society, VIT**
+250 members · Leading technical initiatives across domains
 
 ---
 
-[Resume](https://drive.google.com/file/d/1WqCuKjGZyL_ktYiZ6uuPn6NnC5kVMxCs/view) · [LinkedIn](#) · sejpalraghav05@gmail.com
+## Coursework
+
+Machine Learning · Machine Vision · Reinforcement Learning · Operating Systems · Computer Networks · DSA · Design & Analysis of Algorithms
+
+---
+
+[Resume](https://drive.google.com/file/d/1WqCuKjGZyL_ktYiZ6uuPn6NnC5kVMxCs/view) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/raghav-sejpal/) &nbsp;·&nbsp; sejpalraghav05@gmail.com
