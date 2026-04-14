@@ -171,6 +171,7 @@ Targeting EMNLP 2026 / ACL Findings. Sits at the intersection of RL, NLP, and ag
 ## Leadership
 
 **Chairperson — IEEE Computer Society, VIT**
+
 250 members · Leading technical initiatives across domains
 
 ---
