@@ -1,11 +1,11 @@
 # Raghav Sejpal
 
 CSE (AI & ML) · VIT Vellore
-Chairperson, IEEE Computer Society Chapter
 
-build things that leave impact
+Chairperson, IEEE Computer Society VIT
 
-
+---
+> **Trying to build things that leave impact.**
 ---
 
 [Resume](https://drive.google.com/file/d/1WqCuKjGZyL_ktYiZ6uuPn6NnC5kVMxCs/view) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/raghav-sejpal/) &nbsp;·&nbsp; sejpalraghav05@gmail.com
@@ -20,13 +20,6 @@ build things that leave impact
   <img alt="github contribution grid snake animation"
     src="https://raw.githubusercontent.com/Sejpal-Raghav/Sejpal-Raghav/output/github-contribution-grid-snake.svg" />
 </picture>
-
----
-
-## Experience
-
-**Software Engineering Intern — Inwesol** *(Aug 2025, Remote)*
-Built 17+ REST APIs (Next.js + NeonDB), cut response time 30%, server load 40%.
 
 ---
 
